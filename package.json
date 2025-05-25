@@ -1,0 +1,13 @@
+{
+  "name": "sokushuu-faucet",
+  "private": false,
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
