@@ -44,7 +44,6 @@ const Faucet = () => {
     })
 
     const handleChainSelection = (event: ChangeEvent<HTMLSelectElement>) => {
-        setUserAddress(undefined);
         const chainId = parseInt(event.target.value);
         setSelectedChain(chainMetadataByChainId[chainId]);
     }
@@ -56,6 +55,11 @@ const Faucet = () => {
     }
 
     const openChainSelection = () => {
+        setUserAddress(undefined);
+        setTxHash(undefined);
+        setMessage(undefined);
+        setIsSubmitting(false);
+
         setChainSelectionIsShown(true);
     }
 
